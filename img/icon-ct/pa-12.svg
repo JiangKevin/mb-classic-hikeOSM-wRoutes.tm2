@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg4764" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px"
+	 viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
+<g id="layer1" transform="translate(0,-1040.3622)">
+	<g id="airport-12" transform="translate(-126,-10)">
+		<g id="g21733" transform="translate(-1,-1)">
+			
+				<path id="path14232" inkscape:connector-curvature="0" opacity="0.3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" enable-background="new    " d="
+				M137,1057.8v0.6l-3-0.5v2l1,1.1v0.4h-3v-0.4l1-1.1v-2l-3,0.5v-0.6l3-1.4c0,0,0-1.3,0-2c0-0.4,0.1-1,0.5-1c0.4,0,0.5,0.6,0.5,1
+				c0,0.7,0,2,0,2L137,1057.8z"/>
+			<path id="path7712-0-5" inkscape:connector-curvature="0" fill="#444444" d="M137,1057.8v0.6l-3-0.5v2l1,1.1v0.4h-3v-0.4l1-1.1
+				v-2l-3,0.5v-0.6l3-1.4c0,0,0-1.3,0-2c0-0.4,0.1-1,0.5-1c0.4,0,0.5,0.6,0.5,1c0,0.7,0,2,0,2L137,1057.8z"/>
+		</g>
+	</g>
+</g>
+<rect id="canvas" display="none" fill="none" width="12" height="12"/>
+<g>
+	<line fill="#231F20" x1="9.8" y1="2.9" x2="2.2" y2="9.1"/>
+	<rect x="1.1" y="5.5" transform="matrix(0.7796 -0.6262 0.6262 0.7796 -2.4353 5.0795)" fill="#231F20" width="9.9" height="1"/>
+</g>
+</svg>
