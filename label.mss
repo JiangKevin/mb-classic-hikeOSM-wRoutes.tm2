@@ -306,7 +306,6 @@
   text-wrap-width: 40;
   text-min-distance: 5;
   text-line-spacing: -4;
-//  text-margin: 30;
   [zoom>=12] { text-halo-radius: 3; }
   // We keep the scalerank filters the same for each zoom level.
   // This is slightly inefficient-looking CartoCSS, but it saves
@@ -393,8 +392,7 @@
   text-wrap-before: true;
   text-line-spacing: -4;
   text-min-distance: 15;
-  [zoom>=13] { text-min-distance: 4;}
-//  text-margin: 30;
+  [zoom>=13] { text-min-distance: 4; }
   text-size: 12 * @text_multiplier;
   [zoom>=11] { text-size: 14 * @text_multiplier; text-min-distance: 18; }
   [zoom>=12] { text-size: 15 * @text_multiplier; text-wrap-width: 80; }
@@ -417,8 +415,7 @@
   text-halo-rasterizer: fast;
   text-wrap-width: 60;
   text-wrap-before: true;
-  //text-min-distance: 1;//40;
-  text-margin: 20;
+  text-min-distance: 1;//40;
   text-line-spacing: -4;
   [zoom>=12] { text-size: 12 * @text_multiplier; }
   [zoom>=13] { text-wrap-width: 80; }
@@ -426,8 +423,8 @@
   [zoom>=15] { text-size: 16 * @text_multiplier; text-wrap-width: 120; }
   [zoom>=16] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
   [zoom=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
-  text-min-padding: 1;
-  //text-allow-overlap: true;
+//  text-min-padding: 1;
+  text-allow-overlap: false;
 }
 
 // Suburbs _____________________________________________________________
@@ -453,11 +450,11 @@
   [zoom>=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
 }
 
-// Neighbourhoods & Hamlets ____________________________________________
+// Neighbourhoods & Hamlets & Localities _________________________________
 
 #place_label[zoom>=12][zoom<=18] {
   [type='hamlet'],
-  [type='neighbourhood'] {
+  [type='neighbourhood']{
     text-name: @name;
     text-face-name: @sans_lt;
     text-placement: point;

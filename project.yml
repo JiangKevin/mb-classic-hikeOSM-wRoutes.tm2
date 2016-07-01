@@ -37,13 +37,11 @@ layers:
   - bridge
   - admin
   - svaneti-racha-border
-  - grid1330
-  - mapping-tasks
-  - osmtm_tasks_4
-  - utm-lines
+  - utm_lines
   - country_label_line
-  - tracksmaster
-  - just-tct
+  - tracks_master
+  - tct-route
+  - features
   - country_label
   - marine_label
   - state_label
@@ -51,6 +49,13 @@ layers:
   - water_label
   - peaks
   - mountain_pass
+  - app_ele
+  - markers
+  - mud
+  - notes
+  - scout
+  - signs
+  - towers
   - mountain_peak_label
   - poi_label
   - road_label
@@ -59,12 +64,12 @@ layers:
   - contour.label
 maxzoom: 20
 minzoom: 0
-name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat,tct.81e5wlz3,tct.6itt4u7y,tct.5nlnyzd0,tct.59210768,tct.67807749"
+name: hikeOSMwRoutes
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.e5114113,tct.051f20bb,tct.4772ac2a"
 styles: 
   - style.mss
   - road.mss
   - label.mss
   - poi.mss
-  - grid.mss
+  - more.mss
 template: ''

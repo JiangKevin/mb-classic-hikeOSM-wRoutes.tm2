@@ -22,7 +22,7 @@
 
 // This is for increasing the size of the text across the board by some multiple.
 // Useful when creating print maps and need to increase the text size
-@text_multiplier: 1.0;
+@text_multiplier: 1.0; //1.5
 
 // Background //
 
