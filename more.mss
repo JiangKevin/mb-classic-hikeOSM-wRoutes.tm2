@@ -6,13 +6,13 @@
   line-width: 0.5;
 }
 
-#tct-route {
+#tct_routes[type="tct"] {
   line-color: #f2c612;
   line-width: 2;
   line-opacity: 0.9;
 }
 
-#tracks_master {
+#tct_routes[type="known"] {
   line-width: 1.3;
   line-dasharray: 3,3;
 //  line-color: black;
@@ -54,7 +54,7 @@
   }  
 }
 
-#markers[zoom>=15] {
+#tct_points[type="marker"][zoom>=15] {
   marker-file: url("img/icon-ct/blaze.svg");
   [zoom>=15] {
     marker-width: 10;
@@ -64,7 +64,7 @@
   }
 }
 
-#mud[zoom>=15] {
+#tct_points[type="mud"][zoom>=15] {
   marker-file: url("img/icon-ct/mud.png");
   [zoom>=15] {
     marker-width: 12;
@@ -77,7 +77,7 @@
   }
 }
 
-#notes[zoom>=15] {
+#tct_points[type="notes"][zoom>=15] {
   marker-file: url("img/icon-ct/notes.png");
   [zoom>=15] {
     marker-width: 9;
@@ -90,7 +90,7 @@
   }
 }
 
-#scout[zoom>=14] {
+#tct_points[type="scout"][zoom>=14] {
   marker-file: url("img/icon-ct/scout.png");
   [zoom>=14] {
     marker-width: 12;
@@ -103,7 +103,7 @@
   }
 }
 
-#signs[zoom>=15] {
+#tct_points[type="signs"][zoom>=15] {
   marker-file: url("img/icon-ct/signs.png");
   [zoom>=15] {
     marker-width: 14;
@@ -119,7 +119,7 @@
   }
 }
 
-#mud, #notes, #scout, #signs {
+#tct_points[type="mud"], #tct_points[type="notes"], #tct_points[type="scout"], #tct_points[type="signs"] {
   [zoom>=17] {
     text-face-name: @sans;
     text-name: [name];

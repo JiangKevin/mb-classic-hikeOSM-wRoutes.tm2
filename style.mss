@@ -78,13 +78,13 @@ Map {
 
 // Additional landcover I have added from Soviet maps (Tamo)
 
-#dense_forest[zoom<=21] {
+#landcover_tct[type="dense_forest"][zoom<=18] {
   polygon-fill: @wood;
 }
-#mechseri {
+#landcover_tct[type="mechseri"][zoom<=18] {
   polygon-fill: #e5edca;//lighten(@wood,5);
 }
-#herbaceous {
+#landcover_tct[type="herbaceous"][zoom<=18] {
   polygon-fill: #f3f6dc;//lighten(@grass,5);
 }
 

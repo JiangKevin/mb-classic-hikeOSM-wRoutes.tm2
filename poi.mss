@@ -19,8 +19,8 @@
 }*/
 
 // Peaks
-#peaks[zoom>=11][name_en!=''],
-#peaks[zoom>=13][name_en=''] {
+#peak-pass[natural="peak"][zoom>=11][name_en!=''],
+#peak-pass[natural="peak"][zoom>=13][name_en=''] {
   text-name:'x\n' + [name_en] + '\n' + [ele];
   text-face-name: @sans;
   text-placement: point;
@@ -35,7 +35,7 @@
 }
 
 // Mountain Passes
-#mountain_pass[zoom>=11][name_en!=''] {
+#peak-pass[mountain_p="yes"][zoom>=11][name_en!=''] {
   text-face-name: @sans;
   text-name: [name_en];
   text-fill: #806b2d; 
@@ -61,7 +61,7 @@
 }
 
 // Get rid of some of the mountain climbing passes
-#mountain_pass[zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"] {
+#peak-pass[mountain_p="yes"][zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"] {
   text-opacity: 0;
   text-halo-opacity: 0;
   marker-opacity: 0;
