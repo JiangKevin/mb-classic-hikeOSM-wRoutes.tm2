@@ -37,13 +37,15 @@
 // Mountain Passes
 #peak-pass[mountain_p="yes"][zoom>=11][name_en!=''] {
   text-face-name: @sans;
-  text-name: [name_en];
+  //text-name: [name_en];
+  text-name:[name_en] + '\n' + [ele];
   text-fill: #806b2d; 
   text-dy: 10;
   text-placement: point;
   text-halo-fill: @crop;//fadeout(#fff,80%);
   text-halo-radius: 1.2;
   text-halo-rasterizer: fast;
+  text-min-padding: 1; // Prevent text from getting cut off at tiles
   //marker-allow-overlap: true;
   marker-fill: black;
   [zoom<=13] {

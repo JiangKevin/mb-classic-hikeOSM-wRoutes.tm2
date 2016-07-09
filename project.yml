@@ -47,6 +47,7 @@ layers:
   - water_label
   - peak-pass
   - tct_points
+  - photos
   - mountain_peak_label
   - poi_label
   - road_label
@@ -56,7 +57,7 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSMwRoutes
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.879ycvvr,tct.osm_peak_pass,tct.051f20bb,tct.tct_routes,tct.tct_points"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.879ycvvr,tct.osm_peak_pass,tct.051f20bb,tct.tct_routes,tct.tct_points,tct.c77di1ba"
 styles: 
   - style.mss
   - road.mss

@@ -12,6 +12,18 @@
   line-opacity: 0.9;
 }
 
+#tct_routes[type="scout"] {
+  line-color: #64eb0b;
+  line-width: 2;
+  line-opacity: 0.9;
+}
+
+#tct_routes[type="scouted"] {
+  line-color: #4299e4;
+  line-width: 2;
+  line-opacity: 0.9;
+}
+
 #tct_routes[type="known"] {
   line-width: 1.3;
   line-dasharray: 3,3;
@@ -131,6 +143,26 @@
     text-halo-rasterizer: fast;
     text-wrap-width: 75;
   }
+}
+
+#tct_points[type="app-ele"] {
+  [zoom>=16] {
+    text-face-name: @sans;
+    text-name:'x\n' + [ele];
+    text-fill: #2727b9; 
+    text-dy: 12;
+    text-placement: point;
+    text-halo-fill: @crop;//fadeout(#fff,80%);
+    text-halo-radius: 1.2;
+    text-halo-rasterizer: fast;
+    text-wrap-width: 75;
+  }
+}
+
+#photos[zoom>=14][zoom<=17] {
+  marker-width: 2;
+  marker-fill: white;
+  marker-line-color: blue;
 }
 
 /*#osmtm_tasks_4 {

@@ -71,10 +71,11 @@
     ['mapnik::geometry_type'=2] {
       ::case[zoom>=6] {
         line-color: @case;
-        [zoom<=11] { line-color: @main; }
+        [zoom<=10] { line-color: @main; }
         #road { line-cap: round; }
         #road[structure='tunnel'] { line-dasharray: 3,3; }
-        line-width: 0.4;
+        line-width: 1.2;
+        [zoom>=11] { line-width: 4; }
         [zoom>=12] { line-width: 5; }
         [zoom>=13] { line-width: 5.5; }
         [zoom>=14] { line-width: 6; }
@@ -83,10 +84,11 @@
         [zoom>=17] { line-width: 15; }
         [zoom>=18] { line-width: 17; }
       }
-      ::fill[zoom>=12] {
+      ::fill[zoom>=11] {
         line-color: @main;
         line-cap: round;
         #road[structure='tunnel'] { line-color: mix(@main,@land,50); }
+        [zoom>=11] { line-width: 2; }
         [zoom>=12] { line-width: 3; }
         [zoom>=13] { line-width: 3.5; }
         [zoom>=14] { line-width: 4; }
