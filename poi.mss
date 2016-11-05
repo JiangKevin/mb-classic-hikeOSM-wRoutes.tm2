@@ -84,7 +84,7 @@
   marker-fill: #5e95c4;
   marker-line-color: white;
   marker-line-width: 3;
-  [zoom>=15] {marker-width: 18;}
+  [zoom>=14] {marker-width: 18;}
   [zoom>=18] {marker-width: 22;}
   marker-file: url("img/maki/water-18.svg");
   //marker-allow-overlap: true;

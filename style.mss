@@ -198,9 +198,9 @@ Map {
       polygon-comp-op: multiply;
       [zoom>=0][zoom<=3] { polygon-opacity: 0.10; }
       [zoom>=4][zoom<=5] { polygon-opacity: 0.08; }
-      [zoom>=6][zoom<=12] { polygon-opacity: 0.08; }
-      [zoom>=13][zoom<=15] { polygon-opacity: 0.07; }
-      [zoom>=16][zoom<=18] { polygon-opacity: 0.03; }
+      [zoom>=6][zoom<=12] { polygon-opacity: 0.14; }
+      [zoom>=13][zoom<=15] { polygon-opacity: 0.13; }
+      [zoom>=16][zoom<=18] { polygon-opacity: 0.09; }
       [zoom>=18] { polygon-opacity: 0.01; }
     }
     [class='highlight'] {
@@ -214,8 +214,8 @@ Map {
     }
   }
   ::1 { image-filters: agg-stack-blur(4,4); }
-  ::2 { image-filters: agg-stack-blur(8,8); }
-  ::3 { image-filters: agg-stack-blur(14,14); }
+  ::2 { image-filters: agg-stack-blur(12,12); }
+  ::3 { image-filters: agg-stack-blur(22,22); }
   ::4 { image-filters: agg-stack-blur(32,32); }
   ::5 { image-filters: agg-stack-blur(32,32); }
 }

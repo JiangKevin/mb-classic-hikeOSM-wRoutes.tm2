@@ -34,6 +34,7 @@
 @city_text:         #4a4032;
 @city_halo:         @place_halo;
 @town_text:         lighten(#4a4032,10);
+@town_text_sva:     lighten(#a3614f,10);
 @town_halo:         @place_halo;
 @poi_text:          @poi_text;  
 @road_text:         #4a4032;
@@ -404,7 +405,8 @@
 
 // Villages ____________________________________________________________
 
-#place_label[type='village'][zoom>=10][zoom<=17] {
+// This is from custom OSM extraction to include Svan names
+#peak-pass[place='village'][zoom>=13][zoom<=17] {
   text-name: @name;
   text-face-name: @sans;
   text-placement: point;
@@ -413,17 +415,61 @@
   text-halo-fill: @town_halo;
   text-halo-radius: 2;
   text-halo-rasterizer: fast;
+  text-allow-overlap: false;
+  text-wrap-width: 60;
+  text-wrap-before: true;
+  text-line-spacing: -4;
+  //text-min-padding: 1;
+  [zoom>=12] { text-size: 10 * @text_multiplier; }
+  [zoom>=13] { text-wrap-width: 80; }
+  [zoom>=14] { text-size: 12 * @text_multiplier; text-wrap-width: 100; }
+  [zoom>=15] { text-size: 14 * @text_multiplier; text-wrap-width: 120; }
+  [zoom>=16] { text-size: 16 * @text_multiplier; text-wrap-width: 160; }
+  [zoom=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
+  text-allow-overlap: false;
+  ::svan[zoom>=10][zoom<=17] {
+    text-name: [name_sva_r];
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @town_text_sva;
+    text-size: 11 * @text_multiplier;
+    text-halo-fill: @town_halo;
+    text-halo-radius: 2;
+    text-halo-rasterizer: fast;
+    text-wrap-width: 60;
+    text-wrap-before: true;
+    text-line-spacing: -4;
+    text-min-padding: 1;
+    text-allow-overlap: false;
+    [zoom>=12] { text-size: 10 * @text_multiplier; }
+    [zoom>=13] { text-wrap-width: 80; text-dy: 8;}
+    [zoom>=14] { text-size: 12 * @text_multiplier; text-wrap-width: 100; text-dy: 10;}
+    [zoom>=15] { text-size: 14 * @text_multiplier; text-wrap-width: 120; text-dy: 12;}
+    [zoom>=16] { text-size: 16 * @text_multiplier; text-wrap-width: 160; text-dy: 14;}
+    [zoom=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; text-dy: 16;}
+  }
+}
+
+// the original
+#place_label[type='village'][zoom>=10][zoom<=12] {
+  text-name: @name;
+  text-face-name: @sans;
+  text-placement: point;
+  text-fill: @town_text;
+  text-size: 10 * @text_multiplier;
+  text-halo-fill: @town_halo;
+  text-halo-radius: 1.5;
+  text-halo-rasterizer: fast;
   text-wrap-width: 60;
   text-wrap-before: true;
   text-min-distance: 1;//40;
   text-line-spacing: -4;
-  [zoom>=12] { text-size: 12 * @text_multiplier; }
+  [zoom>=12] { text-size: 11 * @text_multiplier; }
   [zoom>=13] { text-wrap-width: 80; }
   [zoom>=14] { text-size: 14 * @text_multiplier; text-wrap-width: 100; }
   [zoom>=15] { text-size: 16 * @text_multiplier; text-wrap-width: 120; }
   [zoom>=16] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
   [zoom=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
-//  text-min-padding: 1;
   text-allow-overlap: false;
 }
 
@@ -442,6 +488,7 @@
   text-wrap-before: true;
   text-min-distance: 4;
   text-line-spacing: -2;
+  text-allow-overlap: false;
   [zoom=12] { text-min-distance: 30; }
   [zoom>=13] { text-size: 12 * @text_multiplier; text-min-distance: 20; }
   [zoom>=14] { text-size: 13 * @text_multiplier; text-wrap-width: 80; }
@@ -451,8 +498,52 @@
 }
 
 // Neighbourhoods & Hamlets & Localities _________________________________
+// This is from custom OSM extraction to include Svan names
+#peak-pass[zoom>=12][zoom<=18] {
+  [place='hamlet'],
+  [place='neighbourhood']{
+    text-name: @name;
+    text-face-name: @sans_lt;
+    text-placement: point;
+    text-fill: @other_text;
+    text-size: 11 * @text_multiplier;
+    text-halo-fill: @other_halo;
+    text-halo-radius: 1.5;
+    text-halo-rasterizer: fast;
+    text-wrap-width: 60;
+    text-wrap-before: true;
+    text-line-spacing: -2;
+    [zoom>=12] { text-size: 9 * @text_multiplier; text-wrap-width: 80; }
+    [zoom>=14] { text-size: 10 * @text_multiplier; text-wrap-width: 80; }
+    [zoom>=15] { text-size: 11 * @text_multiplier; text-wrap-width: 80; }
+    [zoom>=16] { text-size: 13 * @text_multiplier; text-wrap-width: 100; }
+    [zoom>=17] { text-size: 16 * @text_multiplier; text-wrap-width: 130; }
+    [zoom>=18] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
+    ::svan[zoom>=14][zoom<=18] {
+    text-name: [name_sva_r];
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @town_text_sva;
+    text-size: 11 * @text_multiplier;
+    text-halo-fill: @town_halo;
+    text-halo-radius: 1.5;
+    text-halo-rasterizer: fast;
+    text-wrap-width: 60;
+    text-wrap-before: true;
+    text-line-spacing: -2;
+    text-min-padding: 1;
+    [zoom>=12] { text-size: 8 * @text_multiplier; }
+    [zoom>=13] { text-wrap-width: 80; text-dy: 8;}
+    [zoom>=14] { text-size: 10 * @text_multiplier; text-wrap-width: 100; text-dy: 10;}
+    [zoom>=15] { text-size: 11 * @text_multiplier; text-wrap-width: 120; text-dy: 11;}
+    [zoom>=16] { text-size: 13 * @text_multiplier; text-wrap-width: 160; text-dy: 14;}
+    [zoom=17] { text-size: 16 * @text_multiplier; text-wrap-width: 200; text-dy: 14;}
+    [zoom=18] { text-size: 18 * @text_multiplier; text-wrap-width: 200; text-dy: 18;}
+  }}
+}
 
-#place_label[zoom>=12][zoom<=18] {
+// Commenting out the original  
+/*#place_label[zoom>=12][zoom<=18] {
   [type='hamlet'],
   [type='neighbourhood']{
     text-name: @name;
@@ -473,7 +564,7 @@
     [zoom>=18] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
     //text-min-padding: 1;
   }
-}
+}*/
 
 
 // =====================================================================

@@ -11,9 +11,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 42.4113
-  - 43.0812
-  - 12
+  - 44.3024
+  - 41.3191
+  - 8
 description: Style for hiking maps in the Caucasus
 format: "png8:m=h"
 interactivity_layer: ''
@@ -39,6 +39,7 @@ layers:
   - utm_lines
   - country_label_line
   - tct_routes
+  - tce_routes
   - features
   - country_label
   - marine_label
@@ -47,7 +48,8 @@ layers:
   - water_label
   - peak-pass
   - tct_points
-  - photos
+  - tce_points
+  - photos-34ed7o
   - mountain_peak_label
   - poi_label
   - road_label
@@ -57,7 +59,7 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSMwRoutes
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.879ycvvr,tct.osm_peak_pass,tct.051f20bb,tct.tct_routes,tct.tct_points,tct.c77di1ba"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.879ycvvr,tct.osm_peak_pass,tct.051f20bb,tct.tct_routes,tct.tce_routes,tct.tct_points,tct.tce_points,tct.c77di1ba"
 styles: 
   - style.mss
   - road.mss

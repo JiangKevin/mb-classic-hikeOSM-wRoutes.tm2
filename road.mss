@@ -15,7 +15,7 @@
 }
 
 #road {
-  [class='motorway']['mapnik::geometry_type'=2], {
+  [class='motorway']['mapnik::geometry_type'=2], [class='trunk']{
     ::case[zoom>=6] {
       line-color: @case;
       [zoom<=9] { line-color: @motorway; }
@@ -47,7 +47,7 @@
       [zoom>=18] { line-width: 14; }
     }
   }
-  [class='motorway_link']['mapnik::geometry_type'=2], {
+  [class='motorway_link']['mapnik::geometry_type'=2], [class='trunk_link']{
     ::case {
       line-color: @case;
       #road { line-cap: round; }
@@ -65,6 +65,11 @@
       [zoom>=14] { line-width: 2; }
       [zoom>=16] { line-width: 3; }
       [zoom>=18] { line-width: 4; }
+    }
+  }
+  [class='trunk'],[class='trunk_link'] {
+    ::fill[zoom>=6] {
+      line-color: #efac00;
     }
   }
   [class='primary'],[class='secondary'] {
@@ -188,20 +193,20 @@
       line-join: round;
       line-width: 1;
       [type='footway'] {
-        line-color: #6e6647;
+        line-color: #d97d6a;
         line-dasharray: 6,3;
       }
       [type='path'] {
 //        line-color: #987;
-        line-color: #6e6647;
-        line-dasharray: 6,3;
+        line-color: #d97d6a;//#6e6647;
+        line-dasharray: 4,3;
       }
       [type='hiking'] {
-        line-color: #6e6647;
+        line-color: #d97d6a;
         line-dasharray: 3,1;
       }
       [type='trail'] {
-        line-color: #6e6647;
+        line-color: #d97d6a;//#6e6647;
         line-dasharray: 6,3;
       }
       [type='cycleway'] {
